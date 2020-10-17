@@ -1,7 +1,6 @@
 const express = require("express");
 let app = express();
-let PORT =3000
-;
+let PORT = 3000;
 const pet = require("../database/Pet.js");
 const bodyParser = require("body-parser");
 const cors = require("cors");
@@ -37,18 +36,25 @@ app.post("/api/adoption", (req, res) => {
       var transporter = nodemailer.createTransport(
         smtpTransport({
           service: "gmail",
+          port: 465,
+          secure: false,
           host: "smtp.gmail.com",
           auth: {
             user: "adoptanimalstn@gmail.com",
             pass: "258456357159Adopt",
           },
+          tls: {
+            rejectUnauthorized: false,
+          },
         })
       );
+
       let mailOptions = {
         from: "adoptanimalstn@gmail.com",
         to: `${req.body.email}`,
-        submit: "test",
-        text: "hey",
+        subject: "RBKAT Adoption",
+        text: `We thank you from the bottom of our heart, You are the hope for ${req.body.name}, and we hope that he(she) will be your hope,
+        we will contact you again for the adoption procedure.`,
       };
       transporter.sendMail(mailOptions, (err, info) => {
         if (err) {

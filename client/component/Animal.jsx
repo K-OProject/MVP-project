@@ -17,7 +17,10 @@ class Animal extends React.Component {
       alert("please login");
       return;
     }
-    axios.post("/api/adoption", data).then((res) => location.reload());
+    axios.post("/api/adoption", data).then((res) => {
+      alert("congratulations please check your email");
+      location.reload();
+    });
   }
 
   render() {
