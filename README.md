@@ -1,15 +1,12 @@
 # 🚀 Welcome to your new awesome project!
 
-This project has been created using **webpack scaffold**, you can now run
+to run the project do npm start
+and open localhost 3000
 
-```
-npm run build
-```
+#RBK
 
-or
+About RBKat
+This website only goal is to save as many animals as possible. We try to find good shelter and a loving family for our pets and a life companion for you. Help us help these animals, and help us help you to find a faithful partner for life. We believe in your empathy, we believe that you will make the right choice, we believe in you.
 
-```
-yarn build
-```
 
-to bundle your application
+we worked with react 
